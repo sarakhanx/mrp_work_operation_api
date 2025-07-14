@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <!-- System parameters for MRP Work Operation API -->
+        <record id="config_param_mrp_work_operation_api_enabled" model="ir.config_parameter" forcecreate="0">
+            <field name="key">mrp_work_operation_api.enabled</field>
+            <field name="value">True</field>
+        </record>
+        
+        <record id="config_param_mrp_work_operation_api_endpoint_url" model="ir.config_parameter" forcecreate="0">
+            <field name="key">mrp_work_operation_api.php_endpoint_url</field>
+            <field name="value">http://host.docker.internal:8080/api/test_php_endpoint.php</field>
+        </record>
+        
+        <record id="config_param_mrp_work_operation_api_timeout" model="ir.config_parameter" forcecreate="0">
+            <field name="key">mrp_work_operation_api.api_timeout</field>
+            <field name="value">10</field>
+        </record>
+        
+    </data>
+</odoo> 

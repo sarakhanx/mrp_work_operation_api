@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <!-- Extend Settings with PHP API Configuration -->
+        <record id="res_config_settings_view_form_inherit" model="ir.ui.view">
+            <field name="name">res.config.settings.form.inherit.mrp.work.operation.api</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="inside">
+                    <div class="app_settings_block" data-string="PHP API Integration" data-key="php_api_integration">
+                        <h2>PHP API Integration</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_left_pane">
+                                    <field name="php_api_enabled"/>
+                                </div>
+                                <div class="o_setting_right_pane">
+                                    <label for="php_api_enabled"/>
+                                    <div class="text-muted">
+                                        Enable integration with external PHP API for work operation tracking
+                                    </div>
+                                    <div class="content-group" invisible="not php_api_enabled">
+                                        <div class="mt16">
+                                            <label for="php_api_endpoint_url" class="col-lg-3 o_light_label"/>
+                                            <field name="php_api_endpoint_url" placeholder="http://your-server.com/api/work_operation.php"/>
+                                        </div>
+                                        <div class="mt16">
+                                            <label for="php_api_timeout" class="col-lg-3 o_light_label"/>
+                                            <field name="php_api_timeout"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+        
+    </data>
+</odoo> 
